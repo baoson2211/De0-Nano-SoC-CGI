@@ -69,8 +69,8 @@ int main(int argc, char **argv) {
 
 	data = getenv("QUERY_STRING");
 	if(data == NULL)
-  	printf("<h3> LED status is on</h3>");
-	else {	
+  	printf("<h3> LED status is </h3>");
+	else {
 		sscanf(data,"led=%s",&ledstatus);
 		if(strcmp(ledstatus,"on")) {
 			alt_clrbits_word( ( virtual_base + ( ( uint32_t )( ALT_GPIO1_SWPORTA_DR_ADDR ) & ( uint32_t )( HW_REGS_MASK ) ) ), BIT_LED );
